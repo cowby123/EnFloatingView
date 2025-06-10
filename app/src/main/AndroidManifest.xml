@@ -7,15 +7,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity
-            android:name=".TestActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"
-            android:resizeableActivity="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+       
 
     </application>
 </manifest>
