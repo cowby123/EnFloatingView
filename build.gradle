@@ -1,36 +1,46 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
     ext.kotlin_version = '1.9.10'
     ext {
         agp_version = '8.10.1'
     }
 
     repositories {
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url = uri("https://jitpack.io") }
         google()
-        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://nexus.web.cern.ch/nexus/content/repositories/public/" }
+        maven { url "https://repo.grails.org/grails/core/" }
     }
 
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-    }
-
-    tasks.withType(Javadoc) {
-        options{
-            encoding "UTF-8"
-            charSet 'UTF-8'
-            links "http://docs.oracle.com/javase/7/docs/api"
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
         }
+        maven { url = uri("https://jitpack.io") }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://nexus.web.cern.ch/nexus/content/repositories/public/" }
+        maven { url "https://repo.grails.org/grails/core/" }
     }
+
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
