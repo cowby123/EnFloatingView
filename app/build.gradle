@@ -12,7 +12,7 @@ android {
         jvmTarget = "17"
     }
     compileSdkVersion 35
-    namespace "com.imuxuan.en.floatingviewapp"
+    namespace "com.imuxuan.en.floatingview"
 
     defaultConfig {
         applicationId "com.imuxuan.en.floatingview"

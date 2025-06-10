@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace "com.imuxuan.en.floatingview"
+    namespace "com.imuxuan.floatingview"
     compileSdkVersion 35
 
     defaultConfig {

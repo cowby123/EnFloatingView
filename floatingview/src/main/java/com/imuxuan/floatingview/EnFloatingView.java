@@ -19,13 +19,13 @@ public class EnFloatingView extends FloatingMagnetView {
     private final ImageView mIcon;
 
     public EnFloatingView(@NonNull Context context) {
-        this(context, R.layout.en_floating_view);
+        this(context, com.imuxuan.floatingview.R.layout.en_floating_view);
     }
 
     public EnFloatingView(@NonNull Context context, @LayoutRes int resource) {
         super(context, null);
         inflate(context, resource, this);
-        mIcon = findViewById(R.id.icon);
+        mIcon = findViewById(com.imuxuan.floatingview.R.id.icon);
     }
 
     public void setIconImage(@DrawableRes int resId){
