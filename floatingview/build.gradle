@@ -1,5 +1,22 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'com.github.cowby123' // 替換為你的 GitHub 帳號
+            artifactId = 'EnFloatingView'   // 替換為你的 library 名稱
+            version = '1.0.0'               // 可用 Git tag 或固定版本
+
+            // 可選的額外資訊
+            pom {
+                name = 'EnFloatingView'
+                description = 'A customizable floating view for Android'
+            }
+        }
+    }
+}
 android {
     compileSdkVersion 35
     namespace "com.imuxuan.en.floatingview"
